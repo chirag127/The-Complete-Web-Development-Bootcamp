@@ -1,1 +1,0 @@
-# The Bootstrap Carousel Part 2

@@ -1,1 +1,0 @@
-# Manage ATTENTION with effective User Interface UI Design

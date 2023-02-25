@@ -1,0 +1,19 @@
+<p><strong>TL;DR If you have issues with nodemon in the next lesson, come back here and try these solutions.</strong></p><p><br></p><p>Hey guys,</p><p>In the next lesson, I'll be walking you through how to install <strong>nodemon,</strong> a npm package that will make it way easier for us to auto start our servers.</p><p><strong>Problems with Installing nodemon</strong></p><p>In the next lesson, I'll be showing you the official installation page from nodemon, but you will need to give admin permissions to install it on your system.</p><p>So when this command doesn't work:</p><pre class="prettyprint linenums">npm install -g nodemon</pre><p>I recommend to use this one instead:</p><pre class="prettyprint linenums">sudo npm install -g nodemon</pre><p>It will then ask you to enter the password you use to log on to your computer.</p><p>So, if you have any problems with this step.</p><p>1. Make sure you are logged in to your computer on an account with admin privileges.</p><p>2. Use sudo in front of the installation command.</p><p>3. Type your password when prompted. Note your password typing will not show. Just hit enter once you've typed it all.</p><p><br></p><p><strong>Problems with Running nodemon</strong></p><p>If after installing, when you try to use nodemon, you get errors like the ones below:</p><pre class="prettyprint linenums">/home/user/projects/mongodb-todo/node_modules/nodemon/lib/monitor/run.js:336
+spawn('kill', ['-s', sig, child.pid].concat(kids.map(p =&gt; p.PID)))
+^
+TypeError: Cannot read property 'map' of undefined
+at /home/user/projects/mongodb-todo/node_modules/nodemon/lib/monitor/run.js:336:58
+at /home/user/projects/mongodb-todo/node_modules/pstree.remy/lib/tree.js:53:11
+at ChildProcess.onClose (/home/user/projects/mongodb-todo/node_modules/pstree.remy/lib/tree.js:80:9)
+at ChildProcess.emit (events.js:182:13)
+at maybeClose (internal/child_process.js:962:16)
+at Process.ChildProcess._handle.onexit (internal/child_process.js:251:5)
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! mongodb-todo@1.0.0 start: nodemon
+npm ERR! Exit status 1
+npm ERR!
+npm ERR! Failed at the mongodb-todo@1.0.0 start script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+npm ERR! A complete log of this run can be found in:
+npm ERR! /home/user/.npm/_logs/2018-11-22T12_10_04_952Z-debug.log</pre><p>You can get rid of these by entering the command:</p><p><code>npm i pstree.remy@1.1.0 -D</code> </p><p><br></p><p>This issue is documented here:</p><p><a href="https://github.com/remy/nodemon/issues/1459" rel="noopener noreferrer" target="_blank">https://github.com/remy/nodemon/issues/1459</a></p><p><br></p><p>All the best,</p><p>Your instructor, Angela</p>

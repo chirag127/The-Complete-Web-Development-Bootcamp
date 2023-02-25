@@ -1,0 +1,1 @@
+# MongoDB CRUD Operations in the Shell Delete

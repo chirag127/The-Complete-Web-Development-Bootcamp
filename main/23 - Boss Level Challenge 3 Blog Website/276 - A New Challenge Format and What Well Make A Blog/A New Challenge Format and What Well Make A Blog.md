@@ -1,0 +1,1 @@
+# A New Challenge Format and What Well Make A Blog

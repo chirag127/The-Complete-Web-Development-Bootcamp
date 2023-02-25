@@ -1,0 +1,12 @@
+<p>This is one of the ways you could have solved the challenge using a while loop. There are many others, as long as you achieve the desired outcome -printing the lyrics to the 99 bottles of beer song- then you are successful! If you've come up with a fancy solution or something different, be sure to share it in the Q&amp;A section for other students to learn from!</p><pre class="prettyprint linenums">var numberOfBottles = 99
+while (numberOfBottles &gt;= 0) {
+    var bottleWord = "bottle";
+    if (numberOfBottles === 1) {
+        bottleWord = "bottles";
+    } 
+    console.log(numberOfBottles + " " + bottleWord + " of beer on the wall");
+    console.log(numberOfBottles + " " + bottleWord + " of beer,");
+    console.log("Take one down, pass it around,");
+	numberOfBottles--;
+    console.log(numberOfBottles + " " + bottleWord + " of beer on the wall.");
+}</pre><p>If you want to challenge yourself further, try changing the code to make the english more grammatically correct. So the final output should say "1 <strong>bottle</strong> of beer on the wall" when <code>numberOfBottles</code> is equal to <code>1</code> rather than "1 <strong>bottles</strong> of beer on the wall" and when <code>numberOfBottles</code> is equal to <code>0</code>, you can make the output "<strong>No more</strong> bottles of beer on the wall" instead of <strong>0</strong> bottles of beer on the wall".</p>

@@ -1,0 +1,1 @@
+https://smartcontracts.org/docs/developers-guide/concepts/canisters-code.html#query-update

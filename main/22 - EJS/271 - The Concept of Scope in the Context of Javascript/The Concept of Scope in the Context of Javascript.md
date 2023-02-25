@@ -1,0 +1,1 @@
+# The Concept of Scope in the Context of Javascript

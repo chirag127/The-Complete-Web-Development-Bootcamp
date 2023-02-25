@@ -1,0 +1,1 @@
+# Understanding Templating vs Layouts

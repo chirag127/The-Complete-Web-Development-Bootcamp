@@ -1,0 +1,1 @@
+https://smartcontracts.org/docs/language-guide/actor-classes.html#actor_classes

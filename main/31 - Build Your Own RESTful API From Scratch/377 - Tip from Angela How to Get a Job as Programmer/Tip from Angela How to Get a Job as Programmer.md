@@ -1,0 +1,1 @@
+# Tip from Angela How to Get a Job as Programmer

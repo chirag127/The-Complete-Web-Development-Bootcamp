@@ -1,0 +1,42 @@
+<p>This is one of the solutions for the Karel Check Board Challenge, there are many ways of solving this problem, as long as you managed to achieve the pattern specified then you have succeeded!</p><pre class="prettyprint linenums">function main(){
+   beepersRight();
+   goUpTurnLeft();
+   beepersLeft();
+   goUpTurnRight();
+      beepersRight();
+   goUpTurnLeft();
+   beepersLeft();
+   goUpTurnRight();
+      beepersRight();
+}
+
+function goUpTurnRight() {
+   turnRight();
+   move();
+   turnRight();
+}
+
+function goUpTurnLeft() {
+   turnLeft();
+   move();
+   turnLeft();
+}
+
+function beepersRight() {
+   putBeeper();
+   move();
+   move();
+   putBeeper();
+   move();
+   move();
+   putBeeper();  
+}
+
+function beepersLeft() {
+   move();
+   putBeeper();
+   move();
+   move();
+   putBeeper();
+   move();
+}</pre>

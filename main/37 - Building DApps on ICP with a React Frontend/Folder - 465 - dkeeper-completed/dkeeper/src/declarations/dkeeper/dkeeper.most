@@ -1,0 +1,6 @@
+// Version: 1.0.0
+type List<T> = ?(T, List<T>);
+type Note = {content : Text; title : Text};
+actor {
+  stable var notes : ?(Note, List<Note>)
+};

@@ -96,3 +96,52 @@ npm init
 
 ```
 
+
+
+## now we will install the superheroes package
+
+```bash
+
+npm install superheroes
+
+```
+
+@chirag127 ➜ .../The-Complete-Web-Development-Bootcamp/main/18 - Nodejs/226 - The NPM Package Manager and Installing External Node Modules (main) $ npm install superheroes
+
+added 3 packages, and audited 4 packages in 3s
+
+found 0 vulnerabilities
+
+## we will teh code for the superheroes
+
+```javascript
+
+const superheroes = require('superheroes');
+
+console.log(superheroes.random());
+
+```
+
+## now we will install the supervillains package
+
+```bash
+
+
+# now we will install the supervillains package
+
+```bash
+
+npm install supervillains
+
+```
+
+# now we will use the supervillains package
+
+```javascript
+
+const supervillains = require('supervillains');
+
+console.log(supervillains.random());
+
+```
+

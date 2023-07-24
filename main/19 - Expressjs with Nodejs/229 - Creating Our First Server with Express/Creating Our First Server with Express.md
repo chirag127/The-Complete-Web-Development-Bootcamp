@@ -39,28 +39,11 @@ the entry point is server.js
 // then we will import the express module
 
 
+This is how we can import express module
 ```js
-
+import express from "express";
 const express = require('express');
 
 ```
 
-// wait i forgot to install the express module
 
-insatall it usei ng hte npm
-
-```bash
-
-npm install express
-
-```
-
-```
-
-
-
-let getg started ith the express
-
-```
-
-const

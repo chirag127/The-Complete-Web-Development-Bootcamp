@@ -55,4 +55,13 @@ The DELETE method is used when we want to delete a resource from the server.
 app.delete('/', (req, res) => {
   res.send('Hello World');
 });
+
+```
+
+By running the nodemon command with your file name as an argument, nodemon will automatically monitor changes to your files and restart the Node.js application whenever you save any changes, making the development process more efficient as you won't need to manually restart the server after each code modification.
+
+To install nodemon module golbally and use it  we can use following command in terminal
+```bssh
+npm -i -g nodemon
+nodemon file_name.extension_name (index.js)
 ```

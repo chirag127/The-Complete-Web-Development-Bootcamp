@@ -61,9 +61,9 @@ Localhost refers to the practice of hosting a server on our own computer for tes
 
 Port: A port can be thought of as a gateway that allows communication between applications, such as HTML, CSS, or JavaScript, and the underlying hardware, services, or other applications. Each application or service typically uses a different port number to facilitate this communication.
 
+ Used for checking running port in computer
 ```cmd
-#used for checking running port in computer
- netstat -ano | findstr "LISTENING"
+netstat -ano | findstr "LISTENING"
 ```
 
 

@@ -1,1 +1,0 @@
-# Enabling the Minting Functionality on the Frontend

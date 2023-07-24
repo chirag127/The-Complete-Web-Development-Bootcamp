@@ -1,1 +1,0 @@
-# Optional Live Deployment to Test Internet Identity Authentication

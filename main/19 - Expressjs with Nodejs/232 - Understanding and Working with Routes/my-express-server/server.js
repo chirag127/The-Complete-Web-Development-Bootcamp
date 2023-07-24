@@ -1,89 +1,49 @@
-
+// Import the Express framework
 const express = require("express");
 
-
+// Create an instance of Express application
 const app = express();
 
-// app.get(3000, function() {
-//     console.log("Server started on port 3000");
-// }
+// Set the port number for the server to listen on
+const port = 3000;
 
-// );
+// *******************************
+// Instructions for Postman Testing
+// *******************************
+// Let’s practice using Postman. Make sure your server is running with nodemon.
+// Then test the 5 different routes below with Postman. Open a separate tab for each request.
+// Check that for each route you’re getting the correct status code returned to you from your server.
+// You should not get any 404s or 500 status codes.
+// *******************************
 
-// teh above code is not working so we will use the below code to make it work
+// Route 1: Home Page
+app.get("/", (req, res) => {
+  res.send("<h1>Home Page</h1>");
+});
 
-app.listen(3300, function() {
-    console.log("Server started on port 3000");
-}
+// Route 2: Register User (HTTP POST)
+app.post("/register", (req, res) => {
+  // TODO: Implement code to process registration data
+  res.sendStatus(201); // Send a 201 status code for successful registration
+});
 
-);
+// Route 3: Update User "angela" (HTTP PUT)
+app.put("/user/angela", (req, res) => {
+  res.sendStatus(200); // Send a 200 status code for successful update
+});
 
-// now we will go to the browser and type localhost:3000 and we will see the message on the console
+// Route 4: Partial Update User "angela" (HTTP PATCH)
+app.patch("/user/angela", (req, res) => {
+  res.sendStatus(200); // Send a 200 status code for successful partial update
+});
 
-// now we will go to the browser and type localhost:3000/contact and we will see the message on the console
+// Route 5: Delete User "angela" (HTTP DELETE)
+app.delete("/user/angela", (req, res) => {
+  // TODO: Implement code to delete user "angela"
+  res.sendStatus(200); // Send a 200 status code for successful deletion
+});
 
-// now we will go to the browser and type localhost:3000/about and we will see the message on the console
-
-app.get("/", function(req, res) {
-
-    console.log(req);
-
-    res.send("<h1>Hello, World!</h1>");
-
-}
-
-);
-
-app.get("/contact", function(req, res) {
-
-    res.send("Contact me at: 239847239847");
-
-}
-
-);
-
-app.get("/about", function(req, res) {
-
-    res.send("My name is chirag singhal;");
-
-}
-
-);
-
-
-// now we will go to the browser and type localhost:3000/about and we will see the message on the console
-
-// now we will go to the browser and type localhost:3000/hobbies and we will see the message on the console
-
-app.get("/hobbies", function(req, res) {
-
-    res.send("<ul><li>Coffee</li><li>Code</li><li>More Coffee</li></ul>");
-
-}
-
-);
-
-
-/* i'm still not able to understand the difference between app.get and app.post
-
-Cannot GET /
-set 限制解除
-x1
->
-<
->>
-<<
-O
-x1
-
-*/
-
-// I forgot to restart the server after making changes to the code and that's why I was getting the above error
-
-// now we will go to the browser and type localhost:3000/hobbies and we will see the message on the console
-
-// now we will go to the browser and type localhost:3000/about and we will see the message on the console
-
-// now we will go to the browser and type localhost:3000/contact and we will see the message on the console
-
-// now we will go to the browser and type localhost:3000 and we will see the message on the console
+// Start the server and listen on the specified port
+app.listen(port, () => {
+  console.log(`Server started on port ${port}`);
+});

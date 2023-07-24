@@ -1,10 +1,5 @@
-// Import the Express framework
-const express = require("express");
-
-// Create an instance of Express application
+import express from "express";
 const app = express();
-
-// Set the port number for the server to listen on
 const port = 3000;
 
 // *******************************

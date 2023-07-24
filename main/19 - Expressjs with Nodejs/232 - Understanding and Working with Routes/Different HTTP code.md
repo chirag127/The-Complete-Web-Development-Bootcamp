@@ -40,3 +40,15 @@ The server is not ready to handle the request. Commonly used during server maint
 The server, while acting as a gateway or proxy, did not receive a timely response from the upstream server it accessed.
 
 These are just a few examples of HTTP response codes, and there are many others that serve specific purposes in the HTTP protocol. Understanding these codes helps developers and users to diagnose and troubleshoot issues when interacting with web servers and services.
+
+ To help remember some of the most common HTTP response codes, Here are some tricks:
+
+## 2xx (Successful):
+
+Think of "2xx" as "to success." All status codes in the 2xx range indicate a successful response.
+## 4xx (Client Errors):
+
+Remember "4xx" as "for client mistakes." All status codes in the 4xx range represent errors caused by the client's request.
+## 5xx (Server Errors):
+
+Think of "5xx" as "server cries." All status codes in the 5xx range indicate errors caused by the server.

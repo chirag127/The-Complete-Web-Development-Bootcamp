@@ -39,28 +39,31 @@ the entry point is server.js
 // then we will import the express module
 
 
+This is how we can import express module
 ```js
+// Import the 'express' module
+import express from "express";
 
-const express = require('express');
+// Create an instance of the Express application
+const app = express();
 
-```
+// Set the port number to 3000
+const port = 3000;
 
-// wait i forgot to install the express module
-
-insatall it usei ng hte npm
-
-```bash
-
-npm install express
-
-```
-
-```
-
-
-
-let getg started ith the express
+// Start the server and listen on the specified port
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+});
 
 ```
 
-const
+Localhost refers to the practice of hosting a server on our own computer for testing and development purposes when a dedicated server computer is unavailable.
+
+Port: A port can be thought of as a gateway that allows communication between applications, such as HTML, CSS, or JavaScript, and the underlying hardware, services, or other applications. Each application or service typically uses a different port number to facilitate this communication.
+
+ Used for checking running port in computer
+```cmd
+netstat -ano | findstr "LISTENING"
+```
+
+

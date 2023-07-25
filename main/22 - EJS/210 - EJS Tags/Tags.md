@@ -1,77 +1,77 @@
-# EJS Tags
+# EJS Tags and Their Use
 
-EJS (Embedded JavaScript) allows you to embed JavaScript code directly within HTML templates using specific tags. These tags enable dynamic content generation and provide flexibility in rendering data on the client-side.
+## Introduction
 
-## `<%= ... %>`
+EJS (Embedded JavaScript) is a templating engine for Node.js and web browsers that allows you to embed dynamic content and logic in your HTML files. It provides several tags to execute JavaScript code and display data within the HTML markup.
 
-The `<%= ... %>` tag is used to output the result of a JavaScript expression into the HTML template. It dynamically replaces the tag with the evaluated value of the expression.
+## EJS Tags
 
-**Example:**
+1. `<% %>`: **Scriptlet Tags**
+   - Used to execute JavaScript code without displaying its output.
+   - Example:
+     ```html
+     <% const message = "Hello, World!"; %>
+     ```
 
-```html
-<!-- index.ejs -->
+2. `<%= %>`: **Output Tags**
+   - Used to display the output of JavaScript expressions within the HTML markup.
+   - Example:
+     ```html
+     <p><%= message %></p>
+     ```
 
-<body>
-  <h1>Hello, <%= name %>!</h1>
-</body>
+3. `<%- %>`: **Unescaped Output Tags**
+   - Similar to `<%= %>`, but it does not escape HTML entities, allowing the output of raw HTML.
+   - Example:
+     ```html
+     <div><%- rawHtmlContent %></div>
+     ```
 
+4. `<%# %>`: **Comment Tags**
+   - Used to add comments in the EJS template, which won't be included in the rendered output.
+   - Example:
+     ```html
+     <%# This is a comment %>
+     ```
 
-In this example, when the template is rendered with data { name: 'John' }, the resulting HTML will be `<h1>Hello, John!</h1>`.
+5. `<% include %>`: **Include Tags**
+   - Used to include and render another EJS file within the current template.
+   - Example:
+     ```html
+     <% include('header') %>
+     ```
 
-## `<% ... %>`
+6. `<%- include %>`: **Unescaped Include Tags**
+   - Similar to `<% include %>`, but it includes and renders the file without escaping HTML entities.
+   - Example:
+     ```html
+     <%- include('footer') %>
+     ```
 
-The `<% ... %>` tag is used to include JavaScript code in the template without rendering the output. It's useful for adding logic and control flow to the template.
+7. `<% for %>`: **Looping Tags**
+   - Used for performing loops in the EJS template.
+   - Example:
+     ```html
+     <ul>
+       <% for (let item of items) { %>
+         <li><%= item %></li>
+       <% } %>
+     </ul>
+     ```
 
-**Example:**
+8. `<% if %>`: **Conditional Tags**
+   - Used for adding conditional logic in the template.
+   - Example:
+     ```html
+     <% if (user.isAdmin) { %>
+       <p>Welcome, Admin!</p>
+     <% } else { %>
+       <p>Welcome, User!</p>
+     <% } %>
+     ```
 
-html
-<!-- index.ejs -->
+## Conclusion
 
-<body>
-  <% if (isLoggedIn) { %>
-    <p>Welcome, <%= username %>!</p>
-  <% } else { %>
-    <p>Please log in to continue.</p>
-  <% } %>
-</body>
+EJS tags provide a convenient and straightforward way to embed JavaScript code and display dynamic content in HTML files. Whether you need to execute logic, loop through data, or apply conditional statements, EJS tags enable you to create dynamic and responsive templates for your web applications.
 
-
-In this example, the template will display a personalized welcome message if the `isLoggedIn` variable is true; otherwise, it will prompt the user to log in.
-
-## `<%- ... %>`
-
-The `<%- ... %>` tag is used to output unescaped HTML content. It's similar to `<%= ... %>`, but it does not escape special HTML characters like `<`, `>`, and `&`.
-
-**Example:**
-
-html
-<!-- index.ejs -->
-
-<body>
-  <h1><%- pageTitle %></h1>
-</body>
-
-
-In this example, when the template is rendered with data { `pageTitle`: `<em>Welcome to EJS Website</em>` }, the resulting HTML will display the `pageTitle` value as raw HTML, rendering the `<em>` tags correctly.
-
-## `<%# ... %>`
-
-The `<%# ... %>` tag is used for comments within the EJS template. Anything inside this tag will be ignored and not processed during rendering.
-
-**Example:**
-
-html
-<!-- index.ejs -->
-
-<body>
-  <%# This is a comment. It will not be displayed in the rendered HTML. %>
-  <h1>Hello, <%= name %>!</h1>
-</body>
-
-
-In this example, the comment inside the `<%# ... %>` tag will be ignored, and only the `<h1>` tag with the dynamic content will be rendered.
-
-These are some of the commonly used EJS tags that allow you to create dynamic and interactive templates for your Node.js and JavaScript web applications. By leveraging these tags, you can seamlessly integrate server-side data into your client-side web pages.
-
-
-I hope this is what you are looking for. Let me know if you have any other questions.
+Remember that when using EJS, it's essential to sanitize and validate any user-provided data to prevent potential security vulnerabilities like cross-site scripting (XSS) attacks. Always handle user input with care and escape output appropriately, especially when using unescaped output tags (`<%- %>`).

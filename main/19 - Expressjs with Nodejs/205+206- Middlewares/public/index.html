@@ -1,0 +1,41 @@
+<!-- This is the HTML code for a band name generator. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- This line sets the character encoding for the document. -->
+  <meta charset="UTF-8">
+
+  <!-- This line sets the viewport width to device-width, so the page will scale properly on mobile devices. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- This line sets the title of the document. -->
+  <title>Band Name Generator</title>
+</head>
+
+<body>
+  <!-- This line creates a heading for the page. -->
+  <h1>Band Name Generator</h1>
+
+  <!-- This line creates a form for the user to enter their street name and pet name. -->
+  <form action="/submit" method="POST">
+
+    <!-- This line creates a label for the street name input field. -->
+    <label for="street">Street Name:</label>
+
+    <!-- This line creates an input field for the user to enter their street name. -->
+    <input type="text" name="street" required>
+
+    <!-- This line creates a label for the pet name input field. -->
+    <label for="pet">Pet Name:</label>
+
+    <!-- This line creates an input field for the user to enter their pet name. -->
+    <input type="text" name="pet" required>
+
+    <!-- This line creates a submit button for the user to submit the form. -->
+    <input type="submit" value="Submit">
+
+  </form>
+</body>
+
+</html>

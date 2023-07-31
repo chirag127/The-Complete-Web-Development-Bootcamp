@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EJS Tags</title>
+  </head>
+
+  <body>
+    <h1>
+      <!-- Page Title: Challange about EJS Tag -->
+      Challange about EJS Tag
+    </h1>
+    <% const d = new Date(); %>
+    <%let seconds = d.getSeconds(); %>
+
+    <p>
+      Current second:
+      <!-- Display current second -->
+      <%= seconds %>
+    </p>
+
+    <% if (seconds % 2 === 0) { %>
+      <ul>
+        <!-- List of items goes here if current second is even. -->
+        <% items.forEach((fruit) => { %>
+          <li>
+            <%= fruit %>
+          </li>
+        <% }) %>
+        <!-- If the current second is even and there are no items, the following message should be displayed: -->
+        <!-- <p>No items to display</p> -->
+      </ul>
+    <% } else { %>
+      <!-- If the current second is odd, display the following message: -->
+      <p>No items to display</p>
+    <% } %>
+
+    <p>
+      <!-- Display HTML content from a variable called htmlContent -->
+      <%- htmlContent %>
+    </p>
+
+    <!-- Include the footer from the "footer.ejs" file -->
+    <%- include("footer.ejs") %>
+  </body>
+</html>

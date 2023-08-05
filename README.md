@@ -1,6 +1,6 @@
 # 1. The-Complete-2023-Web-Development-Bootcamp
 
-I contains my notes and my code which I made during the conduction of the The Complete Web Development Bootcamp, taught by Angela Yu on Udemy.
+It contains my notes and my code which I made during the conduction of the The Complete Web Development Bootcamp, taught by Angela Yu on Udemy.
 
 The course is divided into 41 sections, each section contains my notes and all code if that section had a project.
 

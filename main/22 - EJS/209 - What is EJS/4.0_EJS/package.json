@@ -11,6 +11,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "node": "^20.5.0"
+    "node": "^20.19.5"
   }
 }

@@ -34,7 +34,7 @@
     "last 2 edge version"
   ],
   "dependencies": {
-    "@dfinity/auth-client": "0.10.3",
+    "@dfinity/auth-client": "0.19.3",
     "@dfinity/authentication": "0.10.3",
     "@dfinity/identity": "0.10.3",
     "@dfinity/agent": "0.10.3",

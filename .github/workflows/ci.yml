@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'  # Or your preferred Node.js version
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint
+        run: npm run lint  # Assuming you have a lint script (e.g., eslint)
+
+      - name: Build
+        run: npm run build  # Assuming you have a build script (e.g., vite build)
+
+      - name: Test
+        run: npm run test  # Assuming you have a test script (e.g., jest, vitest)
+
+      - name: Deploy
+        if: github.ref == 'refs/heads/main'
+        run: |
+          # Add your deployment steps here. This is a placeholder.
+          echo "Deploying..."
+          # Example: Deploy to a hosting platform like Netlify, Vercel, or AWS.
+          # The specific commands will depend on your chosen platform.
+          # Example using Netlify CLI:
+          # npm install -g netlify-cli
+          # netlify deploy --prod

@@ -1,58 +1,35 @@
----
-name: Bug Report
-about: Report a reproducible bug in the project.
-labels: ["bug", "triage"]
-assignees:
-  - chirag127
+# Bug Report
 
----
+Thank you for taking the time to report a bug. Please fill out this form completely to help us diagnose and fix the issue quickly.
 
-## 🐞 Bug Report
+## Bug Description
 
-Thank you for helping us improve this project! To help us address the issue effectively, please provide the following information:
+Provide a clear and concise description of the bug.
 
-### 1. Description
+*   **What did you expect to happen?**
+    
+*   **What actually happened?**
 
-A clear and concise description of the bug. What were you trying to do? What happened?
+## Steps to Reproduce
 
-### 2. Reproduction Steps
+List the steps to reproduce the behavior. Be as specific as possible.
 
-Steps to reproduce the bug:
+1.  Go to '...'
+2.  Click on '....'
+3.  Scroll down to '...'
+4.  See error
 
-1.  ...
-2.  ...
-3.  ...
+## Environment
 
-### 3. Expected Behavior
+*   **Repository:** `https://github.com/chirag127/WebDev-Odyssey-Full-Stack-Bootcamp-Showcase-Portfolio`
+*   **Operating System:** (e.g., Windows 11, macOS Sonoma 14.2, Ubuntu 22.04)
+*   **Browser (if applicable):** (e.g., Chrome 120.0.6099.109, Firefox 115.0.2)
+*   **Version (if applicable):** (e.g., Node.js v20.10.0, Python 3.11.5)
 
-Describe what you expected to happen.
+## Screenshots / Logs (Optional)
 
-### 4. Actual Behavior
+If possible, add screenshots or console logs to help explain your problem.
 
-Describe what actually happened.
+## Additional Context (Optional)
 
-### 5. Environment
-
-*   **Operating System:** [e.g., Windows 10, macOS 13, Ubuntu 22.04]
-*   **Browser (if applicable):** [e.g., Chrome, Firefox, Safari]
-*   **Node.js Version (if applicable):** [e.g., v18.16.0]
-*   **npm/yarn/pnpm Version (if applicable):** [e.g., npm 9.5.1]
-*   **Project Dependencies (if applicable):** Please list relevant project dependencies and versions if they seem relevant to the bug.
-
-### 6. Code Sample (if applicable)
-
-A minimal, reproducible code sample (if applicable) that demonstrates the bug. Please format code using Markdown code blocks:
-
-javascript
-// Your code here
-
-
-### 7. Screenshots/Videos (if applicable)
-
-If applicable, add screenshots or a video to help explain the bug.
-
-### 8. Additional Information
-
-Any other information that might be helpful in diagnosing the bug.
-
----
+Add any other context about the problem here. For example, specific project context, dependencies, or workarounds you've tried.

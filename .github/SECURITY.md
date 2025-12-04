@@ -1,38 +1,53 @@
-# Security Policy
+# Security Policy for WebDev-Odyssey-Full-Stack-Bootcamp-Showcase-Portfolio
 
-## Reporting Security Vulnerabilities
+As an Apex Technical Authority project, security is foundational, adhering to the principle of "Zero-Defect, High-Velocity, Future-Proof." This repository represents a professional showcase portfolio utilizing modern JavaScript/TypeScript stacks (React, Node.js, MongoDB).
 
-We take the security of our project seriously. If you discover a security vulnerability, please report it to us immediately.  Do not disclose the vulnerability publicly until we have had a chance to address it.
+## 1. Supported Versions
 
-### How to Report a Vulnerability
+This repository is actively maintained and follows the latest stable releases for its core technologies:
 
-Please report security vulnerabilities by emailing chirag.m.shah@gmail.com.
+*   **JavaScript/TypeScript:** Latest stable LTS versions.
+*   **React/Frontend Frameworks:** Current major stable release.
+*   **Node.js/Backend:** Latest LTS version at the time of the last commit.
 
-Include the following information in your report:
+## 2. Reporting a Vulnerability
 
-*   Your name and contact information (optional).
-*   The specific URL of the affected page (if applicable).
-*   A description of the vulnerability and how to reproduce it.
-*   Any proof-of-concept (POC) code or steps (if applicable).
+We encourage security researchers to report potential vulnerabilities responsibly. Please follow the mandated Apex reporting procedure outlined below.
 
-### Vulnerability Response Process
+### A. **DO NOT** create a Public Issue for security concerns.
 
-1.  **Acknowledgment:** We will acknowledge receipt of your report within 24-48 hours.
-2.  **Triage:** We will assess the severity and impact of the vulnerability.
-3.  **Resolution:** We will work to fix the vulnerability as quickly as possible.  This may involve patching code, updating dependencies, or other measures.
-4.  **Disclosure:** Once the vulnerability is fixed, we will publicly disclose it (if appropriate) and credit you for your report (if you wish).
+Publicly disclosing a vulnerability before it can be patched exposes the system and users to unnecessary risk.
 
-### Supported Versions
+### B. **Responsible Disclosure Procedure**
 
-We aim to support the latest versions of dependencies and the core technologies used in this project. Security patches will be applied to the most recent stable releases.
+1.  **Draft a Detailed Report:** Clearly document the vulnerability, including:
+    *   The affected component or file path.
+    *   Steps to reproduce the exploit (Proof of Concept).
+    *   The potential impact (e.g., Data exposure, Denial of Service).
+    *   Recommended mitigation (if known).
+2.  **Secure Contact:** Email the report directly to the maintainer:
+    *   **Email:** `security+webdev-odyssey@chirag127.com` (This is a placeholder; use the actual primary contact or a dedicated security alias if one exists).
+3.  **Acknowledgement:** We commit to acknowledging receipt of the report within **48 hours**.
+4.  **Patching & Coordinated Disclosure:** We will work diligently to create a patch. We will coordinate with you on a reasonable timeline for public disclosure after the fix has been deployed and verified via CI/CD (`.github/workflows/ci.yml`).
 
-### Security Best Practices
+## 3. Security Principles Applied
 
-This project follows security best practices, including:
+This project adheres to core security best practices relevant to its Full-Stack JavaScript architecture:
 
-*   Regularly updating dependencies to address known vulnerabilities.
-*   Validating and sanitizing all user inputs.
-*   Using secure coding practices to prevent common vulnerabilities like SQL injection and cross-site scripting (XSS).
-*   Storing sensitive information securely.
+*   **Input Validation:** All user input (client-side and server-side) is rigorously sanitized and validated to prevent XSS, Injection attacks (SQL/NoSQL), and command injection.
+*   **Dependency Scanning:** Automated dependency scanning is enforced via GitHub's Dependabot integration (or equivalent pre-commit hooks managed by Biome/Ruff equivalents if adapted for JS).
+*   **Secret Management:** **NO** sensitive keys, tokens, or passwords are committed to this repository. All secrets must be injected via environment variables during deployment or local development.
+*   **Rate Limiting:** Backend services (Node.js/Express) implement necessary rate limiting to prevent brute-force attacks.
+*   **CORS Configuration:** Strict Cross-Origin Resource Sharing (CORS) policies are enforced where applicable in the backend API setup.
 
-Thank you for helping us keep this project secure!
+## 4. Automated Security Checks (CI/CD Integration)
+
+Our Continuous Integration pipeline (`.github/workflows/ci.yml`) is configured to fail the build if critical security warnings or obvious misconfigurations are detected during linting or testing phases.
+
+*   **Testing Enforcement:** E2E tests (`Playwright`) must include checks for basic security regressions when applicable (e.g., verifying error messages do not leak internal paths).
+
+--- 
+
+*For general project information and architecture, please refer to the main `README.md`.*
+
+`Last Updated: December 2025`

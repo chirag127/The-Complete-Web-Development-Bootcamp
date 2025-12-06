@@ -50,7 +50,7 @@
     "react-scripts": "5.0.0",
     "@dfinity/auth-client": "^0.10.3",
     "@dfinity/authentication": "^0.10.3",
-    "@dfinity/identity": "^0.15.0",
+    "@dfinity/identity": "^0.19.3",
     "lit-html": "^1.4.1",
     "ts-loader": "^9.2.3",
     "typescript": "^4.3.5"

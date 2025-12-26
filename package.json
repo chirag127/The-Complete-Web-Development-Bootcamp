@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "body-parser": "^1.20.3",
+    "body-parser": "^1.20.4",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
     "exrpess": "^0.0.1-security",
